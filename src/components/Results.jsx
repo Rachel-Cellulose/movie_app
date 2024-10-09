@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export default function Results({results}) {
+export default function Results({ results }) {
   return (
     <div>
-        {results.map ((result) => (
-            <div> {result.title} </div>
-        ))}
-        </div>
-  )
+      {results.map((result, index) => (
+        <div key={result.id || index}> {result.title} </div>
+      ))}
+    </div>
+  );
 }
